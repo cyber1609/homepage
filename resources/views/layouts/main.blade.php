@@ -3,7 +3,7 @@
 <head>
     <link rel="icon" href="/img/icon.png">
     <title>My homepage</title>
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{secure_asset('css/app.css')}}" rel="stylesheet">
 </head>
 <body>
 
@@ -13,6 +13,6 @@
 @include('includes.navigation')
 
 @include('includes.footer')
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>
 </body>
 </html>
