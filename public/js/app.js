@@ -37276,6 +37276,11 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+$('#up').click(function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
