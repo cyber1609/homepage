@@ -31,6 +31,8 @@ Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
+Route::post('/contacts', 'MessagesController@submit')->name('contacts.submit');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

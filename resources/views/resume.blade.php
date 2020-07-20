@@ -45,7 +45,7 @@
                             <li>Design, develop, test and deploy web applications.</li>
                             <li>Code pages, files, test, debug and deploy.</li>
                             <li>Assist and support in the upkeep and maintenance of web sites.</li>
-                            <li>                                Fix bugs, troubleshoot and resolve problems.</li>
+                            <li>Fix bugs, troubleshoot and resolve problems.</li>
                         </ul>
                     </td>
                 </tr>

@@ -44,49 +44,68 @@
             </div>
             <div class="col-lg-7 py-4">
                 <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Your name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Your email</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="subject" name="subject" class="form-control">
-                                    <label for="subject" class="">Subject</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
 
-                                <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                    <label for="message">Your message</label>
-                                </div>
+                    {!! Form::open(['route' => 'contacts.submit']) !!}
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                {{Form::label('name', 'Name')}}
+                                {{Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Jon Snow'])}}
+                                @error('name')
+                                <script>document.getElementById('name').classList.add('is-invalid')</script>
+                                <div class="text-danger">{{$errors->first('name')}}</div>
+                                @enderror
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+
+                                {{Form::label('email', 'E-Mail Address')}}
+                                {{Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'example@gmail.com'])}}
+                                @error('email')
+                                <script>document.getElementById('email').classList.add('is-invalid')</script>
+                                <div class="text-danger">{{$errors->first('email')}}</div>
+                                @enderror
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                {{Form::label('subject', 'Subject')}}
+                                {{Form::text('subject', null, ['class' => 'form-control', 'placeholder' => 'Your subject here'])}}
                             </div>
                         </div>
-                    </form>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="md-form">
+
+                                {{Form::label('message', 'Message')}}
+                                {{Form::textarea('message', null, ['class' => 'form-control md-textarea', 'placeholder' => 'Leave me a message...'])}}
+
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="text-center text-md-left text-light">
-                        <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+
+                        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                     </div>
+
+                    {!! Form::close() !!}
+
+
+
                     <div class="status"></div>
                 </div>
             </div>
         </div>
     </div>
-
 
 
 @endsection
