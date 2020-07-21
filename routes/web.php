@@ -15,23 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', 'PagesController@index')->name('index');
 
-Route::get('/resume', function () {
-    return view('resume');
-})->name('resume');
+Route::get('/resume', 'PagesController@resume')->name('resume');
 
-Route::get('/photos', function () {
-    return view('photos');
-})->name('photos');
+Route::get('/photos', 'PagesController@photos')->name('photos');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-})->name('contacts');
+Route::get('/contacts', 'PagesController@contacts')->name('contacts');
 
-Route::post('/contacts', 'MessagesController@submit')->name('contacts.submit');
+Route::post('/contacts', 'MessagesController@submit')->name('message.submit');
+
+Route::get('/messages', 'MessagesController@index')->name('message.index');
+
 
 Auth::routes();
 

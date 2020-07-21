@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Message;
 use Illuminate\Http\Request;
 
 class MessagesController extends Controller
@@ -14,6 +15,14 @@ class MessagesController extends Controller
             'email' => 'required|email'
         ]);
 
-        return \request('email');
+        Message::create(\request()->all());
+
+        return redirect()->back()->with('success', 'Message sent!');
+    }
+
+    public function index()
+    {
+        $messages = Message::all();
+        return view('messages', compact('messages'));
     }
 }

@@ -2,6 +2,13 @@
 
 @section('content')
     <h1 class="text-center py-4">{{__('Contacts')}}</h1>
+    @if(session('success'))
+        <div class="container">
+        <div class="alert alert-success text-center">
+            {{session('success')}}
+        </div>
+        </div>
+    @endif
     <div class="container">
         <div class="row">
             <div class="col-lg-5 py-4">
@@ -45,7 +52,7 @@
             <div class="col-lg-7 py-4">
                 <div class="col-md-9 mb-md-0 mb-5">
 
-                    {!! Form::open(['route' => 'contacts.submit']) !!}
+                    {!! Form::open(['route' => 'message.submit']) !!}
 
                     <div class="row">
                         <div class="col-md-6">
@@ -82,26 +89,19 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-
                             <div class="md-form">
-
                                 {{Form::label('message', 'Message')}}
                                 {{Form::textarea('message', null, ['class' => 'form-control md-textarea', 'placeholder' => 'Leave me a message...', 'rows' => '5'])}}
-
                             </div>
                         </div>
                     </div>
-
                     <div class="text-center text-md-left text-light">
-
                         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                     </div>
 
                     {!! Form::close() !!}
 
 
-
-                    <div class="status"></div>
                 </div>
             </div>
         </div>
