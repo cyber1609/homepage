@@ -86,7 +86,7 @@
                             <div class="md-form">
 
                                 {{Form::label('message', 'Message')}}
-                                {{Form::textarea('message', null, ['class' => 'form-control md-textarea', 'placeholder' => 'Leave me a message...'])}}
+                                {{Form::textarea('message', null, ['class' => 'form-control md-textarea', 'placeholder' => 'Leave me a message...', 'rows' => '5'])}}
 
                             </div>
                         </div>
