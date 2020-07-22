@@ -59,6 +59,17 @@
                 </tr>
 
                 <tr>
+                    <td><h3>Relevant works</h3></td>
+                    <td>
+                        <ul>
+                            <li><a href="http://vam.md/">VAM</a> - Freelance project under mentorship</li>
+                            <li><a href="https://task-manager-500.herokuapp.com/">Tasks lists</a> - a simple app with full CRUD for a tasks list</li>
+                        </ul>
+                    </td>
+
+                </tr>
+
+                <tr>
                     <td><h3>Completed courses</h3></td>
                     <td>
                         <p>

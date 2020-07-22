@@ -47,6 +47,22 @@
                             </div>
                         </div>
                     </a>
+                    <a class="text-decoration-none text-dark" href="https://github.com/cyber1609" target="_blank">
+                        <div class="row no-gutters mt-3">
+                            <div class="col-1 text-center"><i class="fa fa-github fa-3x"></i></div>
+                            <div class="col d-flex align-items-center">
+                                <div class="col-12">GitHub</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="text-decoration-none text-dark" href="https://www.upwork.com/freelancers/~0128b1487efed3287d" target="_blank">
+                        <div class="row no-gutters mt-3">
+                            <div class="col-1 text-center"><img src="img/upwork.png" height="43"></div>
+                            <div class="col d-flex align-items-center">
+                                <div class="col-12">UpWork</div>
+                            </div>
+                        </div>
+                    </a>
                 </section>
             </div>
             <div class="col-lg-7 py-4">
