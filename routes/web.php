@@ -16,18 +16,20 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'PagesController@index')->name('index');
-
 Route::get('/resume', 'PagesController@resume')->name('resume');
-
 Route::get('/photos', 'PagesController@photos')->name('photos');
-
 Route::get('/contacts', 'PagesController@contacts')->name('contacts');
-
 Route::post('/contacts', 'MessagesController@submit')->name('message.submit');
 
-Route::get('/messages', 'MessagesController@index')->name('message.index');
+
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth', 'prefix' => 'admin', 'name' => 'admin.'], function() {
+
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/messages', 'MessagesController@index')->name('message.index');
+
+});
+
