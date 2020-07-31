@@ -7,16 +7,16 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link @if(Request::url() === secure_asset('index')) active @endif" href="{{route('index')}}"><i class="fa fa-fw fa-home"></i> Home</a>
+                    <a class="nav-link @if(Request::url() == secure_url('index')) active @endif" href="{{route('index')}}"><i class="fa fa-fw fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @if(Request::url() === secure_asset('resume')) active @endif" href="{{route('resume')}}"><i class="fa fa-fw fa-file"></i> Resume</a>
+                    <a class="nav-link @if(Request::url() == secure_url('resume')) active @endif" href="{{route('resume')}}"><i class="fa fa-fw fa-file"></i> Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @if(Request::url() === secure_asset('photos')) active @endif" href="{{route('photos')}}"><i class="fa fa-fw fa-camera"></i> Photos</a>
+                    <a class="nav-link @if(Request::url() == secure_url('photos')) active @endif" href="{{route('photos')}}"><i class="fa fa-fw fa-camera"></i> Photos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link @if(Request::url() === secure_asset('contacts')) active @endif" href="{{route('contacts')}}"><i class="fa fa-fw fa-envelope"></i> Contacts</a>
+                    <a class="nav-link @if(Request::url() == secure_url('contacts')) active @endif" href="{{route('contacts')}}"><i class="fa fa-fw fa-envelope"></i> Contacts</a>
                 </li>
             </ul>
 {{--            <form class="form-inline mt-2 mt-md-0">--}}

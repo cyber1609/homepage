@@ -8,10 +8,9 @@
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 </head>
 <body>
+@include('includes.navigation')
 
 @yield('content')
-
-@include('includes.navigation')
 
 @include('includes.footer')
 <script src="{{asset('js/app.js')}}"></script>
