@@ -3,7 +3,7 @@
     <main role="main">
         <div id="resume">
             <div class="container">
-                <h1 class="text-center py-4"><a href="{{asset('/storage/cv.pdf')}}" download>Resume</a></h1>
+                <h1 class="text-center py-4"><a href="https://drive.google.com/file/d/1S1NBx6w0aBOGnC-N_HUVTb3O9REUgJth/view?usp=sharing" target="_blank">Resume</a></h1>
                 <h2 class="text-center"><b>Cojocaru Ion</b></h2>
                 <p class="text-center"><strong>cojocaru.ion.88@gmail.com</strong><br />
                     <table class="table table-bordered">
