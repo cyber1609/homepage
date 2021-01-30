@@ -18,7 +18,7 @@ class Admin
         if (auth()->user()) {
             if (auth()->user()->isAdmin())
                 return $next($request);
-            return (404);
+            return (403);
         }
         return redirect('login');
     }

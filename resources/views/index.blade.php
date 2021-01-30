@@ -31,10 +31,13 @@
 {{--        </a>--}}
     </div>
 
-
-{{--    <div class="container marketing">--}}
-
-
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Hello world!</h1>
+                <p class="lead">My name is Ion Cojocaru and I am happy to welcome you on my web-page!</p>
+{{--                <p class="lead">I am currently working as a dispatcher at SE Moldelectrica, which is the Transmission System Operator of Moldova. I have finished the Harvard CS50: Introduction to Computer Science course and started the Harvard CS50W: Web Programming with Python and JavaScript course. I have accomplished 3 tasks, but started learning PHP and obtained some (beginner) skills in Laravel and Symfony frameworks. I want to expand my knowledge and potentially change my field of work.</p>--}}
+            </div>
+        </div>
 {{--        <div class="row">--}}
 {{--            <div class="col-lg-4">--}}
 {{--                <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">--}}
@@ -94,7 +97,6 @@
 {{--        </div>--}}
 
 {{--        <hr class="featurette-divider">--}}
-{{--    </div>--}}
 </main>
 @endsection
 

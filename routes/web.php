@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/resume', 'PagesController@resume')->name('resume');
+Route::get('/resume/download', 'PagesController@resumeDownload')->name('resume.download');
 Route::get('/photos', 'PagesController@photos')->name('photos');
 Route::get('/contacts', 'PagesController@contacts')->name('contacts');
 Route::post('/contacts', 'MessagesController@submit')->name('message.submit');

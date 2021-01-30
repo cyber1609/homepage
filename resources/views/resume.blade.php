@@ -3,7 +3,7 @@
     <main role="main">
         <div id="resume">
             <div class="container">
-                <h1 class="text-center py-4">Resume</h1>
+                <h1 class="text-center py-4"><a href="{{asset('/storage/cv.pdf')}}" download>Resume</a></h1>
                 <h2 class="text-center"><b>Cojocaru Ion</b></h2>
                 <p class="text-center"><strong>cojocaru.ion.88@gmail.com</strong><br />
                     <table class="table table-bordered">
@@ -25,8 +25,11 @@
                     <td><h3>Work Experience</h3></td>
                     <td>
                         <p><strong>TSO dispatcher – </strong><em><a href="http://moldelectrica.md/ro/">SE Moldelectrica</a><br />
-                                August 2011 – present</em></p>
+                                August 2011 – December 2020</em></p>
+                        <p><strong>TSO shift supervisor – </strong><em><a href="http://moldelectrica.md/ro/">SE Moldelectrica</a><br />
+                                January 2021 – present</em></p>
                         <ul>
+                            <li>Full responsibility of subordinate staff.</li>
                             <li>Maintain power balance and inter-system energy exchange within operational hour.</li>
                             <li>Read charts, meters, and gauges to monitor voltage and electricity flows.</li>
                             <li>Check equipment and indicators to detect evidence of operating problems.</li>
@@ -47,6 +50,17 @@
                             <li>Assist and support in the upkeep and maintenance of web sites.</li>
                             <li>Fix bugs, troubleshoot and resolve problems.</li>
                         </ul>
+                        <p><strong>Back-end developer – </strong><em><a href="https://blueline.md/">Blueline SRL</a><br />
+                                September 2020 – present</em></p>
+                        <ul>
+                            <li>Worked with other developers on several projects for companies admin-side panels.</li>
+                            <li>Implemented new features and services to support client applications.</li>
+                            <li>Estimated effort for development tasks.</li>
+                            <li>Helped to develop and maintain applications.</li>
+                            <li>Integrated user-facing elements developed by front-end developers with server side logic.</li>
+                            <li>Maintained and evolved in class back-end infrastructure.</li>
+                            <li>Contribute to design and development of Backend and API’s.</li>
+                        </ul>
                     </td>
                 </tr>
 
@@ -62,6 +76,7 @@
                     <td><h3>Relevant works</h3></td>
                     <td>
                         <ul>
+                            <li><a href="https://books-500.herokuapp.com/login">books-50</a> - A book review site, under CS50W</li>
                             <li><a href="http://vam.md/">VAM</a> - Freelance project under mentorship</li>
                             <li><a href="https://task-manager-500.herokuapp.com/">Tasks lists</a> - a simple app with full CRUD for a tasks list</li>
                         </ul>
