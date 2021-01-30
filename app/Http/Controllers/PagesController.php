@@ -26,15 +26,4 @@ class PagesController extends Controller
     {
         return view('contacts');
     }
-
-    public function resumeDownload()
-    {
-        $file= public_path(). "/download/cv.pdf";
-dd($file);
-        $headers = [
-            'Content-Type' => 'application/pdf',
-        ];
-        return Storage::download($file, 'Resume.jpg', $headers);
-    }
-
 }
