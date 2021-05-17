@@ -1,19 +1,19 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * App\Album
+ * App\Models\Album
  *
  * @property-read Collection|Photo[] $photos
  * @property-read int|null $photos_count
- * @method static Builder|\App\Album newModelQuery()
- * @method static Builder|\App\Album newQuery()
- * @method static Builder|\App\Album query()
+ * @method static Builder|\App\Models\Album newModelQuery()
+ * @method static Builder|\App\Models\Album newQuery()
+ * @method static Builder|\App\Models\Album query()
  * @mixin \Eloquent
  */
 class Album extends Model

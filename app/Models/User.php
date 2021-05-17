@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Builder;
@@ -11,7 +11,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
 
 /**
- * App\User
+ * App\Models\User
  *
  * @property int $id
  * @property string $name
@@ -23,17 +23,17 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $updated_at
  * @property-read DatabaseNotificationCollection|DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
- * @method static Builder|\App\User newModelQuery()
- * @method static Builder|\App\User newQuery()
- * @method static Builder|\App\User query()
- * @method static Builder|\App\User whereCreatedAt($value)
- * @method static Builder|\App\User whereEmail($value)
- * @method static Builder|\App\User whereEmailVerifiedAt($value)
- * @method static Builder|\App\User whereId($value)
- * @method static Builder|\App\User whereName($value)
- * @method static Builder|\App\User wherePassword($value)
- * @method static Builder|\App\User whereRememberToken($value)
- * @method static Builder|\App\User whereUpdatedAt($value)
+ * @method static Builder|\App\Models\User newModelQuery()
+ * @method static Builder|\App\Models\User newQuery()
+ * @method static Builder|\App\Models\User query()
+ * @method static Builder|\App\Models\User whereCreatedAt($value)
+ * @method static Builder|\App\Models\User whereEmail($value)
+ * @method static Builder|\App\Models\User whereEmailVerifiedAt($value)
+ * @method static Builder|\App\Models\User whereId($value)
+ * @method static Builder|\App\Models\User whereName($value)
+ * @method static Builder|\App\Models\User wherePassword($value)
+ * @method static Builder|\App\Models\User whereRememberToken($value)
+ * @method static Builder|\App\Models\User whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class User extends Authenticatable
