@@ -26,7 +26,7 @@ class Logout extends BaseComponent
      */
     public function assert(Browser $browser)
     {
-        $browser->assertSee('Homepage');
+        $browser->assertSee(env('APP_NAME'));
     }
 
     /**
