@@ -4,23 +4,18 @@ jobs:
 
   dusk-php:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:8.0.21
-        env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-          MYSQL_DATABASE: "laravel"
-        ports:
-          - 3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
       - name: Prepare The Environment
-        run: cp .env.example .env
+        run: cp .env.ci .env
       - name: Install Composer Dependencies
         run: composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
       - name: Generate Application Key
         run: php artisan key:generate
+      - name: Create Sqlite Database
+        run: php artisan make:sqlite
+      - name: Migrate Database
+        run: php artisan migrate
       - name: Upgrade Chrome Driver
         run: php artisan dusk:chrome-driver `/opt/google/chrome/chrome --version | cut -d " " -f3 | cut -d "." -f1`
       - name: Start Chrome Driver
@@ -28,8 +23,6 @@ jobs:
       - name: Run Laravel Server
         run: php artisan serve --no-reload &
       - name: Run Dusk Tests
-        env:
-          APP_URL: "http://127.0.0.1:8000"
         run: php artisan dusk
       - name: Upload Screenshots
         if: failure()
